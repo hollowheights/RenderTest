@@ -30,8 +30,9 @@ app.layout = html.Div(
     Output("graph", "figure"),
     Input("type", "value"),
 )
+
 def generate_chart(values):
-       fig = px.scatter_mapbox(
+    fig = px.scatter_mapbox(
         df_airports,
         lat="lat",
         lon="long",
@@ -39,7 +40,6 @@ def generate_chart(values):
         size="cnt",
         color="cnt",
         zoom=3 )
-    
     fig.update_layout(mapbox_style="open-street-map")
     
     return fig
