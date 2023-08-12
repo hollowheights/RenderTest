@@ -7,6 +7,7 @@ df_airports = pd.read_csv(
 )
 
 app = Dash(__name__)
+app.title("SR Test App")
 
 server = app.server
 
@@ -30,9 +31,6 @@ app.layout = html.Div(
     Output("graph", "figure"),
     Input("type", "value"),
 )
-
-def testfunc(values):
-    print(values)
     
 def generate_chart(values):
     fig = px.scatter_mapbox(
