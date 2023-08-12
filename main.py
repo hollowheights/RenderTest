@@ -11,6 +11,7 @@ server = app.server
 
 app.layout = html.Div(
     [
+        html.title("Test Page")
         html.H4("Airports"),
         html.P(
             "px.scatter_geo is used to plot points on globe across geolocations while "
