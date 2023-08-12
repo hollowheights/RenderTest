@@ -7,7 +7,7 @@ df_airports = pd.read_csv(
 )
 
 app = Dash(__name__)
-app.title("SR Test App")
+#app.title("SR Test App")
 
 server = app.server
 
