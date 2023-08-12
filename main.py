@@ -31,6 +31,9 @@ app.layout = html.Div(
     Input("type", "value"),
 )
 
+def testfunc(values):
+    print(values)
+    
 def generate_chart(values):
     fig = px.scatter_mapbox(
         df_airports,
