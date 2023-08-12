@@ -51,6 +51,10 @@ def generate_chart(values):
         )
 
         fig.update_layout(mapbox_style="open-street-map")
+        
+        # Set the size of the plot
+        fig.update_layout(width=800, height=400)
+
         fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
     else:
         fig = px.scatter_mapbox(
