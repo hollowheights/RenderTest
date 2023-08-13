@@ -44,7 +44,7 @@ def generate_chart(values):
     fig.update_layout(mapbox_style="open-street-map")
     
     # Set the size of the plot
-    fig.update_layout(width=1000, height=3000)
+    fig.update_layout(width=2000, height=1200)
 
     return fig
 
