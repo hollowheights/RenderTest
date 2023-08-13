@@ -15,9 +15,6 @@ app.layout = html.Div(
     [
         dcc.Graph(id="graph"),
     ]
-)
-    
-def generate_chart(values):
     fig = px.scatter_mapbox(
         df_airports,
         lat="lat",
@@ -30,8 +27,8 @@ def generate_chart(values):
     
     # Set the size of the plot
     fig.update_layout(width=1500, height=900)
-
-    return fig
+)
+    
 
 if __name__ == "__main__":
     app.run_server(debug=True)
