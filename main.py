@@ -27,8 +27,8 @@ app.layout = html.Div(
 )
 
 @app.callback(
-    Input("type", "value"),
     Output("graph", "figure"),
+    Input("type", "value"),
 )
     
 def generate_chart(values):
