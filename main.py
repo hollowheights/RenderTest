@@ -46,7 +46,6 @@ def generate_chart(values):
     fig.update_layout(width=1500, height=900)
 
     return fig
-import render
 
 if __name__ == "__main__":
     app.run_server(debug=True)
