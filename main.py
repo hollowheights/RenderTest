@@ -14,15 +14,6 @@ server = app.server
 app.layout = html.Div(
     [
         dcc.Graph(id="graph"),
-        html.P(
-            "Enter the type of graph you want to plot: (scatter_geo or scatter_mapbox)"
-        ),
-        dcc.Dropdown(
-            id="type",
-            options=["scatter_mapbox", "scatter_geo"],
-            value="scatter_mapbox",
-            clearable=False,
-        ),
     ]
 )
 
