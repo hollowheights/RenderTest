@@ -1,6 +1,7 @@
 from dash import Dash, dcc, html, Input, Output
 import plotly.express as px
 import pandas as pd
+from dash.embed import Embed
 
 df_airports = pd.read_csv(
     "https://raw.githubusercontent.com/plotly/datasets/master/2011_february_us_airport_traffic.csv"
@@ -46,7 +47,17 @@ def generate_chart(values):
     fig.update_layout(width=2000, height=1200)
 
     return fig
+import render
 
+embed_code = render.Embed(
+    project_id="<your-project-id>",
+    app_id="<your-app-id>",
+    width=500,
+    height=300,
+    title="My Dash app"
+)
+
+print(embed_code)
 
 if __name__ == "__main__":
     app.run_server(debug=True)
