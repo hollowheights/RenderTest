@@ -16,11 +16,6 @@ app.layout = html.Div(
         dcc.Graph(id="graph"),
     ]
 )
-
-@app.callback(
-    Output("graph", "figure"),
-    Input("type", "value"),
-)
     
 def generate_chart(values):
     fig = px.scatter_mapbox(
