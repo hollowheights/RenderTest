@@ -7,7 +7,7 @@ df_airports = pd.read_csv(
 )
 
 app = Dash(__name__)
-#app.title("SR Test App")
+app.title = "SR Test App"
 
 server = app.server
 
@@ -26,10 +26,9 @@ app.layout = html.Div(
     ]
 )
 
-
 @app.callback(
-    Output("graph", "figure"),
     Input("type", "value"),
+    Output("graph", "figure"),
 )
     
 def generate_chart(values):
