@@ -49,15 +49,5 @@ def generate_chart(values):
     return fig
 import render
 
-embed_code = render.Embed(
-    project_id="<your-project-id>",
-    app_id="<your-app-id>",
-    width=500,
-    height=300,
-    title="My Dash app"
-)
-
-print(embed_code)
-
 if __name__ == "__main__":
     app.run_server(debug=True)
