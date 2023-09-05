@@ -7,6 +7,9 @@ df_airports = pd.read_csv(
 )
 
 app = Dash(__name__)
+app.title = "SR Test App"
+server = app.server
+
 
 fig = px.scatter_mapbox(
     df_airports,
